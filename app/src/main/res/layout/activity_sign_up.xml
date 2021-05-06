@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignUpActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/logorelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/size_134dp"
+                    android:layout_height="@dimen/size_129dp"
+                    android:src="@drawable/kisaanlogo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signuprelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logorelative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_210dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Let's get started !"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_22dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signuprelative"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:layout_marginTop="@dimen/size_3dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_110dp"
+                    android:layout_height="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Sign Up"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_16dp" />
+                
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="@dimen/size_13dp"
+                    android:layout_height="@dimen/size_13dp"
+                    android:src="@drawable/icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/size_30dp"
+                    android:layout_marginTop="@dimen/size_4dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signupfullnamerelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginrelative"
+                android:layout_marginTop="@dimen/size_22dp">
+
+                <TextView
+                    android:id="@+id/signupfullnametv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Full Name"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_12dp" />
+
+                <EditText
+                    android:id="@+id/signupfullnameet"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_below="@id/signupfullnametv"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_25dp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:fontFamily="@font/montserratmedium"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/pageColor"
+                    android:textColor="@color/headingColor" />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signupemailrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupfullnamerelative"
+            android:layout_marginTop="@dimen/size_17dp">
+
+            <TextView
+                android:id="@+id/signupemailtv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:fontFamily="@font/montserratregular"
+                android:text="Email"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/size_12dp" />
+
+            <EditText
+                android:id="@+id/signupemailet"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_below="@+id/signupemailtv"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_25dp"
+                android:background="@drawable/round_shape_edittext"
+                android:fontFamily="@font/montserratmedium"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/size_10dp"
+                android:backgroundTint="@color/pageColor"
+                android:textColor="@color/headingColor" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signupmobilenorelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupemailrelative"
+            android:layout_marginTop="@dimen/size_17dp">
+
+            <TextView
+                android:id="@+id/signupmobilenotv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:fontFamily="@font/montserratregular"
+                android:text="Mobile Number"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/size_12dp" />
+
+            <EditText
+                android:id="@+id/signupmobilenoet"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_below="@+id/signupmobilenotv"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_25dp"
+                android:background="@drawable/round_shape_edittext"
+                android:fontFamily="@font/montserratmedium"
+                android:inputType="number"
+                android:padding="@dimen/size_10dp"
+                android:backgroundTint="@color/pageColor"
+                android:textColor="@color/headingColor" />
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signupgenderrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signupmobilenorelative"
+                android:layout_marginTop="@dimen/size_17dp">
+
+                <TextView
+                    android:id="@+id/signupgendertv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Gender"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signupgendergrouprelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signupgenderrelative"
+                android:layout_marginTop="@dimen/size_7dp">
+
+                <RadioGroup
+                    android:id="@+id/signupgenderbuttongroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <RadioButton
+                        android:id="@+id/radiomale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:padding="8dp"
+                        android:layout_marginLeft="@dimen/size_50dp"
+                        android:buttonTint="@color/titleColor"
+                        android:textColor="@color/titleColor"
+                        android:fontFamily="@font/montserratregular"
+                        android:backgroundTint="@color/colorPrimary"
+                        tools:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/radiofemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:padding="16dp"
+                        android:layout_marginLeft="@dimen/size_46dp"
+                        android:buttonTint="@color/titleColor"
+                        android:textColor="@color/titleColor"
+                        android:fontFamily="@font/montserratregular"
+                        android:backgroundTint="@color/colorPrimary"
+                        tools:visibility="visible" />
+                    
+                </RadioGroup>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/signuppasswordrelative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signupgendergrouprelative"
+                    android:layout_marginTop="@dimen/size_17dp">
+
+                    <TextView
+                        android:id="@+id/signuppasswordtv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_23dp"
+                        android:fontFamily="@font/montserratregular"
+                        android:text="Password"
+                        android:textColor="@color/titleColor"
+                        android:textSize="@dimen/size_12dp" />
+
+                    <EditText
+                        android:id="@+id/signuppasswordet"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:layout_below="@+id/signuppasswordtv"
+                        android:layout_marginLeft="@dimen/size_23dp"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginRight="@dimen/size_25dp"
+                        android:background="@drawable/round_shape_edittext"
+                        android:fontFamily="@font/montserratmedium"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/size_10dp"
+                        android:backgroundTint="@color/pageColor"
+                        android:textColor="@color/headingColor" />
+
+                    </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signupusertyperelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signuppasswordrelative"
+                android:layout_marginTop="@dimen/size_17dp">
+
+                <TextView
+                    android:id="@+id/signupusertypetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="User-Type"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signupusertypegrouprelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signupusertyperelative"
+                android:layout_marginTop="@dimen/size_7dp">
+
+
+
+                <RadioGroup
+                    android:id="@+id/signupusertypebuttongroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radiofarmer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farmer"
+                        android:padding="10dp"
+                        android:layout_marginLeft="@dimen/size_50dp"
+                        android:buttonTint="@color/titleColor"
+                        android:textColor="@color/titleColor"
+                        android:fontFamily="@font/montserratregular"
+                        android:backgroundTint="@color/colorPrimary"
+                        tools:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/radiowholeseller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whole-Seller"
+                        android:padding="10dp"
+                        android:layout_marginTop="@dimen/size_3dp"
+                        android:layout_marginLeft="@dimen/size_50dp"
+                        android:buttonTint="@color/titleColor"
+                        android:textColor="@color/titleColor"
+                        android:fontFamily="@font/montserratregular"
+                        android:backgroundTint="@color/colorPrimary"
+                        tools:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/radioseedseller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seed-Seller"
+                        android:padding="10dp"
+                        android:layout_marginTop="@dimen/size_3dp"
+                        android:layout_marginLeft="@dimen/size_50dp"
+                        android:buttonTint="@color/titleColor"
+                        android:textColor="@color/titleColor"
+                        android:fontFamily="@font/montserratregular"
+                        android:backgroundTint="@color/colorPrimary"
+                        tools:visibility="visible" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginbuttonrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signupusertypegrouprelative"
+                android:layout_marginTop="@dimen/size_30dp">
+
+                <Button
+                    android:id="@+id/signupjoinusbutton"
+                    android:layout_width="143dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:background="@drawable/button_backgroundcolor"
+                    android:text="JOIN US"
+                    android:fontFamily="@font/montserratbold"
+                    android:textSize="@dimen/size_12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginbuttonrelative"
+                android:layout_marginTop="@dimen/size_18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_marginRight="@dimen/size_40dp"
+                    android:layout_marginLeft="@dimen/size_40dp"
+                    android:textColor="@color/titleColor"
+                    android:text="By continuing, you agree to accept our
+Privacy Policy and Terms of Service."
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/size_10dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:padding="@dimen/size_20dp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/progressbar_button"
+        android:padding="@dimen/size_12dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/black"
+        android:visibility="invisible"/>
+</RelativeLayout>

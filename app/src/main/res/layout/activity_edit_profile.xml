@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditProfileActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/titlebar_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_3dp"
+                android:layout_marginRight="@dimen/size_20dp">
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="@dimen/size_13dp"
+                    android:layout_height="@dimen/size_13dp"
+                    android:layout_marginTop="@dimen/size_14dp"
+                    android:src="@drawable/icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_photo_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlebar_relative"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_140dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Profile Photo"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_photo_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_photo_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="@dimen/size_20dp">
+
+                <ImageView
+                    android:id="@+id/user_photo"
+                    android:layout_width="@dimen/size_95dp"
+                    android:layout_height="@dimen/size_97dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/man" />
+
+                <Button
+                    android:id="@+id/change_photo_button"
+                    android:layout_width="@dimen/size_110dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_140dp"
+                    android:layout_marginTop="@dimen/size_2dp"
+                    android:background="@drawable/button_changephoto"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Change photo"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/size_10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_185dp"
+                    android:layout_marginTop="@dimen/size_35dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/headingColor" />
+
+                <Button
+                    android:id="@+id/remove_photo_button"
+                    android:layout_width="@dimen/size_110dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_140dp"
+                    android:layout_marginTop="@dimen/size_68dp"
+                    android:background="@drawable/remove_photo_button"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Remove photo"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/size_10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_detail_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_photo_relative"
+                android:layout_marginTop="@dimen/size_27dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_110dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Edit Detail"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_personal_name_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_detail_relative"
+                android:layout_marginTop="@dimen/size_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_12dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Name :"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_15dp" />
+
+                <TextView
+                    android:id="@+id/edit_person_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor2"
+                    android:layout_marginLeft="@dimen/size_77dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:text=""
+                    android:layout_marginTop="@dimen/size_13dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor1"
+                    android:fontFamily="@font/montserratregular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_mobileno_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_personal_name_relative"
+                android:layout_marginTop="@dimen/size_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_12dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Mobile No. :"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_15dp" />
+
+                <TextView
+                    android:id="@+id/edit_mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor2"
+                    android:layout_marginLeft="@dimen/size_111dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:text=""
+                    android:layout_marginTop="@dimen/size_13dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor1"
+                    android:fontFamily="@font/montserratregular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_emailid_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_mobileno_relative"
+                android:layout_marginTop="@dimen/size_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_12dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Email :"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_15dp" />
+
+                <TextView
+                    android:id="@+id/edit_emailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor2"
+                    android:layout_marginLeft="@dimen/size_74dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:text=""
+                    android:layout_marginTop="@dimen/size_13dp"
+                    android:textColor="@color/buttonColor1"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserratregular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_type_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_emailid_relative"
+                android:layout_marginTop="@dimen/size_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_12dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Your Type :"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_15dp" />
+
+                <TextView
+                    android:id="@+id/edit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonColor2"
+                    android:layout_marginLeft="@dimen/size_106dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:text=""
+                    android:layout_marginTop="@dimen/size_13dp"
+                    android:textColor="@color/buttonColor1"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserratregular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_type_relative"
+                android:layout_marginTop="@dimen/size_40dp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/size_20dp">
+
+                <Button
+                    android:id="@+id/saveDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Save"
+                    android:background="@drawable/button_backgroundcolor"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

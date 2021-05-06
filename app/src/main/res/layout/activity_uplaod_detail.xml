@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UplaodDetailActivity"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/logorelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/size_100dp"
+                android:layout_height="@dimen/size_100dp"
+                android:src="@drawable/ic_baseline_done" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logorelative"
+            android:layout_marginTop="@dimen/size_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Successfully Data Upload in Server"
+                android:textColor="@color/titleColor"
+                android:gravity="center"
+                android:fontFamily="@font/montserratregular"
+                android:textSize="@dimen/size_15dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

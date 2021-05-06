@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OtpChecker"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/logorelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size_20dp">
+
+        <ImageView
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_100dp"
+            android:src="@drawable/ic_baseline_lock_open" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/otprelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logorelative"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_10dp">
+
+        <TextView
+            android:layout_width="@dimen/size_210dp"
+            android:layout_height="@dimen/size_30dp"
+            android:fontFamily="@font/montserratbold"
+            android:text="OTP Verification"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/size_22dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailotprelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otprelative"
+        android:layout_marginTop="@dimen/size_22dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginRight="@dimen/size_44dp"
+            android:layout_marginLeft="@dimen/size_44dp"
+            android:textColor="@color/titleColor"
+            android:text="Jay Kisaan will send you massage in
+your registration number,
+please check and Enter the Below"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/size_12dp"
+            android:fontFamily="@font/montserratmedium"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/enterotprelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailotprelative"
+        android:layout_marginTop="@dimen/size_22dp">
+
+        <EditText
+            android:id="@+id/enterotpet"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginLeft="@dimen/size_23dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_25dp"
+            android:background="@drawable/round_shape_edittext"
+            android:fontFamily="@font/montserratmedium"
+            android:inputType="number"
+            android:backgroundTint="@color/pageColor"
+            android:padding="10dp"
+            android:textColor="@color/headingColor" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonrelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterotprelative"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:layout_marginBottom="@dimen/size_40dp">
+
+        <Button
+            android:id="@+id/verifyotpbutton"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/size_23dp"
+            android:background="@drawable/button_backgroundcolor"
+            android:text="Submit"
+            android:fontFamily="@font/montserratbold"
+            android:textSize="@dimen/size_12dp" />
+
+    </RelativeLayout>
+
+   <!-- <ProgressBar
+        android:id="@+id/progressbarchecknumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterotprelative"
+        android:layout_centerHorizontal="true"/>-->
+
+
+</RelativeLayout>

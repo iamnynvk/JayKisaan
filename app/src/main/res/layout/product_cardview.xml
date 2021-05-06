@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/size_120dp"
+    android:layout_height="@dimen/size_200dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/product_cardView">
+
+    <RelativeLayout
+        android:id="@+id/main_relative_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pageColor"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_120dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="@color/colorPrimary"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_below="@+id/product_image"
+            android:fontFamily="@font/montserratmedium"
+            android:gravity="center"
+            android:text="Cotton"
+            android:textColor="@color/headingColor"
+            android:textSize="@dimen/size_13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_marginLeft="@dimen/size_8dp"
+            android:layout_marginTop="2dp"
+            android:text="₹"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/size_12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_marginLeft="@dimen/size_25dp"
+            android:layout_marginTop="2dp"
+            android:text="Price"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/size_12dp" />
+
+        <TextView
+            android:id="@+id/address1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_marginLeft="@dimen/size_25dp"
+            android:layout_marginTop="2dp"
+            android:text="address1"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/size_45dp"
+            android:textColor="@color/transparent"
+            android:textSize="@dimen/size_12dp"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/mobileNO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_marginStart="@dimen/size_70dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/transparent"
+            android:text="hey"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/product_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_marginLeft="@dimen/size_8dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:text="590 kg"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/size_9dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/address2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_marginLeft="@dimen/size_8dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:text="hey"
+            android:gravity="right"
+            android:textColor="@color/transparent"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:textSize="@dimen/size_9dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="@dimen/size_10dp"
+            android:layout_height="@dimen/size_10dp"
+            android:layout_below="@+id/product_quantity"
+            android:layout_marginLeft="@dimen/size_6dp"
+            android:layout_marginTop="@dimen/size_6dp"
+            android:src="@drawable/ic_baseline_live_location" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_quantity"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Ahmedabad"
+            android:textColor="@color/buttonColor3"
+            android:textSize="@dimen/size_8dp" />
+
+        <TextView
+            android:id="@+id/statesho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_quantity"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:fontFamily="@font/montserratmedium"
+            android:text="gujarat"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:textColor="@color/transparent"
+            android:textSize="@dimen/size_8dp" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBarofcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@android:color/black" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

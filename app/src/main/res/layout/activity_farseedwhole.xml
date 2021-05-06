@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FarSeedWholeActivity"
+    android:background="@color/colorPrimary"
+    android:id="@+id/main_Relative">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/bellrelative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_21dp"
+                android:layout_marginLeft="@dimen/size_240dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/bell_icon"
+                    android:layout_width="@dimen/size_19dp"
+                    android:layout_height="@dimen/size_19dp"
+                    android:src="@drawable/notifications" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/verifyemailrelative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/verifyemailtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_60dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Please Verify Email Address"
+                    android:textColor="@color/buttonColor2"
+                    android:textSize="@dimen/size_13dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/verifyemailbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/size_200dp"
+                    android:layout_marginTop="@dimen/size_2dp"
+                    android:background="@drawable/button_backgroundcolor"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Verify"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/titlerelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_below="@+id/verifyemailrelative">
+
+                <TextView
+                    android:layout_width="@dimen/size_130dp"
+                    android:layout_height="@dimen/size_33dp"
+                    android:text="Categories"
+                    android:gravity="center"
+                    android:textSize="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/categories_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlerelative">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/news_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categories_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="@dimen/size_33dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Letest"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/news_main_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_below="@+id/news_relative"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/Image_Slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_150dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="15"
+                    app:iss_delay="0"
+                    app:iss_period="2000" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/size_3dp"
+                    android:indeterminateTint="@android:color/black"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/videoset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_below="@+id/news_main_relative">
+
+                <TextView
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="@dimen/size_33dp"
+                    android:text="Videos"
+                    android:gravity="center"
+                    android:textSize="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/headingColor"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/videobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/videoset"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                android:id="@+id/technical"
+                android:layout_width="@dimen/size_120dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_weight="1"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/button_backgroundcolor"
+                android:text="Technical Videos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+                <Button
+                android:id="@+id/croping"
+                android:layout_width="@dimen/size_120dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_weight="1"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/button_backgroundcolor"
+                android:text="Croping Videos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/recent_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/videobutton"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="@dimen/size_33dp"
+                    android:text="Recent"
+                    android:gravity="center"
+                    android:textSize="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/headingColor"/>
+
+                <TextView
+                    android:id="@+id/seeallproduct"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="@dimen/size_33dp"
+                    android:text="See all>>"
+                    android:textColor="@color/headingColor"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/size_10dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recycler_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginBottom="@dimen/size_50dp"
+                android:layout_below="@+id/recent_relative"
+                android:layout_above="@+id/bottom_navigation"
+                tools:ignore="NotSibling">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"/>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/size_3dp"
+                android:background="@drawable/progressbar_button"
+                android:indeterminateTint="@android:color/white"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/pageColor"
+        app:itemTextColor="@drawable/selectericoncolor"
+        app:itemIconTint="@drawable/selectericoncolor"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

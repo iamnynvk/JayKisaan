@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "202540253429",
+    "firebase_url": "https://jaykisaan-98133.firebaseio.com",
+    "project_id": "jaykisaan-98133",
+    "storage_bucket": "jaykisaan-98133.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202540253429:android:027c70b2c559ba477c45bc",
+        "android_client_info": {
+          "package_name": "com.example.jaykisaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202540253429-ou50842bdoc9r033fnacchngnr1llgq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHnQXoiaYlC9mLFNC2mbZHL5Nvcyiw2HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202540253429-ou50842bdoc9r033fnacchngnr1llgq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

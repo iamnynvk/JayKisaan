@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductDetail"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_relative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_3dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        tools:ignore="NotSibling">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/size_13dp"
+            android:layout_height="@dimen/size_13dp"
+            android:layout_marginTop="@dimen/size_14dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/product_name_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_18dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserratregular"
+            android:gravity="center"
+            android:text="Cotton"
+            android:textColor="@color/headingColor"
+            android:textSize="@dimen/size_15dp" />
+
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="@dimen/size_18dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/notifications" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar_relative">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/productimage_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/product_images"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="@dimen/size_40dp"
+                    android:layout_marginRight="@dimen/size_40dp"
+                    android:src="@drawable/apple" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/productdetail_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/productimage_relative"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_12dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Product Details"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/product_tv_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productdetail_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Product Name"
+                    android:textColor="@color/headingColor" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/product_data_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_tv_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_name_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cotton"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Product_detail_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/product_data_relative"
+                android:layout_marginTop="@dimen/size_10dp">
+
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Price"
+                    android:textColor="@color/headingColor" />
+
+                <TextView
+                    android:id="@+id/tv_productquant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Product Quantity"
+                    android:gravity="right"
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Product_detail_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/product_price_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+
+                <TextView
+                    android:id="@+id/product_quant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="580 kg"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/agent_address_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/main_details"
+                android:layout_marginTop="@dimen/size_20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_12dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Address"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/agent_address_tv_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agent_address_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/tv_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Address Line 1"
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/homeno_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agent_address_tv_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addressline_1_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="166"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/near_tv_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homeno_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/tv_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Address Line 2"
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/near_et_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/near_tv_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addressline_2_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Santoshi krupa soc. sitanagar soc."
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/hometown_main_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/near_et_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hometown_tv_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Hometown | City"
+                    android:textColor="@color/headingColor" />
+
+                <TextView
+                    android:id="@+id/state_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:gravity="right"
+                    android:text="State"
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/homwtown_et_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hometown_main_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hometown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Surat"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+
+                <TextView
+                    android:id="@+id/states"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Gujarat"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Mobileno_tv_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homwtown_et_main"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:layout_marginRight="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Mobile No."
+                    android:textColor="@color/headingColor" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/mobileno_et_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Mobileno_tv_relative"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mobileno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 9106266864"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_13dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileno_et_relative"
+                android:layout_margin="@dimen/size_10dp">
+
+                <Button
+                    android:id="@+id/call_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/call_button"
+                    android:text="Call"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_13dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

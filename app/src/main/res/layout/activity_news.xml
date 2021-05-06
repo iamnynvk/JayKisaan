@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewsActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/titlebar_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_3dp"
+            tools:ignore="NotSibling">
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/size_13dp"
+                android:layout_height="@dimen/size_13dp"
+                android:src="@drawable/icon"
+                android:layout_marginTop="@dimen/size_14dp"/>
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="@dimen/size_18dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/notifications"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_150dp"
+            android:layout_below="@id/titlebar_relative"
+            android:layout_margin="@dimen/size_20dp">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/size_3dp"
+                android:indeterminateTint="@android:color/black"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/titlerelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_relative"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp">
+
+        <TextView
+            android:id="@+id/heading_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/headingColor"
+            android:textSize="@dimen/size_15dp"
+            android:fontFamily="@font/montserratbold"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/informationrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlerelative"
+            android:layout_marginTop="@dimen/size_22dp">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:layout_marginRight="@dimen/size_24dp"
+                android:layout_marginLeft="@dimen/size_24dp"
+                android:textColor="@color/headingColor"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/size_12dp"
+                android:paddingBottom="@dimen/size_50dp"
+                android:fontFamily="@font/montserratmedium" />
+        </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/size_3dp"
+        android:background="@drawable/progressbar_button"
+        android:indeterminateTint="@android:color/black"
+        android:visibility="invisible"/>
+</RelativeLayout>

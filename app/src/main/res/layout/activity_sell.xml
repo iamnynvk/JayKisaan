@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SellActivity"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/titlebar_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_3dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                tools:ignore="NotSibling">
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="@dimen/size_13dp"
+                    android:layout_height="@dimen/size_13dp"
+                    android:layout_marginTop="@dimen/size_14dp"
+                    android:src="@drawable/icon" />
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="@dimen/size_18dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/notifications" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sell_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlebar_relative"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_40dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:gravity="center"
+                    android:text="Sell"
+                    android:textColor="@color/headingColor"
+                    android:textSize="@dimen/size_20dp" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sell_relative"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/size_50dp">
+
+                <ImageView
+                android:id="@+id/crop_sell"
+                android:layout_width="@dimen/size_115dp"
+                android:layout_height="@dimen/size_140dp"
+                android:src="@drawable/crops"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vegetable_relatives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sell_relative"
+                android:layout_marginRight="@dimen/size_25dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/size_50dp"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/vegetable_sell"
+                    android:layout_width="@dimen/size_115dp"
+                    android:layout_height="@dimen/size_140dp"
+                    android:src="@drawable/vegetable"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vegetable_relatives"
+                android:layout_marginRight="@dimen/size_25dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/fruit_sell"
+                    android:layout_width="@dimen/size_115dp"
+                    android:layout_height="@dimen/size_140dp"
+                    android:src="@drawable/fruits"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vegetable_relatives"
+                android:layout_marginRight="@dimen/size_25dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:layout_marginBottom="@dimen/size_70dp"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/seed_sell"
+                    android:layout_width="@dimen/size_115dp"
+                    android:layout_height="@dimen/size_140dp"
+                    android:src="@drawable/seeds"/>
+
+            </RelativeLayout>
+            
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/bottom_nav"
+            app:itemTextColor="@drawable/selectericoncolor"
+            app:itemIconTint="@drawable/selectericoncolor"
+            app:menu="@menu/menu_navigation"
+            android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

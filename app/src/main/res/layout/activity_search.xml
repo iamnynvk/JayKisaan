@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_button_acti"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.SearchActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/titlebar_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40dp"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_3dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    tools:ignore="NotSibling">
+
+                    <ImageView
+                        android:id="@+id/cancel"
+                        android:layout_width="@dimen/size_13dp"
+                        android:layout_height="@dimen/size_13dp"
+                        android:layout_marginTop="@dimen/size_14dp"
+                        android:src="@drawable/icon" />
+
+                    <ImageView
+                        android:id="@+id/notification"
+                        android:layout_width="@dimen/size_18dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/notifications" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/crops_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titlebar_relative"
+                    android:layout_marginTop="@dimen/size_10dp">
+
+                    <TextView
+                        android:layout_width="@dimen/size_75dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_marginLeft="@dimen/size_20dp"
+                        android:fontFamily="@font/montserratbold"
+                        android:gravity="center"
+                        android:text="Search"
+                        android:textColor="@color/headingColor"
+                        android:textSize="@dimen/size_20dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/search_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/crops_relative"
+                    android:layout_marginTop="@dimen/size_15dp">
+
+
+                    <EditText
+                        android:id="@+id/search_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/size_20dp"
+                        android:layout_marginRight="@dimen/size_60dp"
+                        android:background="@drawable/round_shape_edittext"
+                        android:backgroundTint="@color/pageColor"
+                        android:fontFamily="@font/montserratmedium"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:textColor="@color/headingColor" />
+
+                    <ImageView
+                        android:id="@+id/search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/searchvector"
+                        android:layout_marginLeft="@dimen/size_240dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recycler_relative_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_marginRight="@dimen/size_20dp"
+                    android:layout_marginLeft="@dimen/size_20dp"
+                    android:layout_marginBottom="@dimen/size_50dp"
+                    android:layout_below="@+id/search_relative"
+                    android:layout_above="@+id/bottom_navigation"
+                    tools:ignore="NotSibling">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@color/bottom_nav"
+            app:itemIconTint="@drawable/selectericoncolor"
+            app:itemTextColor="@drawable/selectericoncolor"
+            app:menu="@menu/menu_navigation" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

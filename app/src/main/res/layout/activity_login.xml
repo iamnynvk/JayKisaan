@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.LoginActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/logorelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/size_134dp"
+                    android:layout_height="@dimen/size_129dp"
+                    android:src="@drawable/kisaanlogo"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+            android:id="@+id/welcomerelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logorelative"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_10dp">
+
+            <TextView
+                android:layout_width="@dimen/size_210dp"
+                android:layout_height="@dimen/size_30dp"
+                android:fontFamily="@font/montserratbold"
+                android:text="Welcome, Back !"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/size_22dp" />
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomerelative"
+                android:layout_marginLeft="@dimen/size_23dp"
+                android:layout_marginTop="@dimen/size_3dp">
+
+                <TextView
+                    android:layout_width="@dimen/size_110dp"
+                    android:layout_height="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="Login Again !"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginrelative"
+                android:layout_marginTop="@dimen/size_22dp">
+
+                <TextView
+                    android:id="@+id/emailtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Email"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_12dp" />
+
+                <EditText
+                    android:id="@+id/emailet"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_below="@id/emailtv"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_25dp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:fontFamily="@font/montserratmedium"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/pageColor"
+                    android:text=""
+                    android:textColor="@color/headingColor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/passwordrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailrelative"
+                android:layout_marginTop="@dimen/size_17dp">
+
+                <TextView
+                    android:id="@+id/passwordtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Password"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_12dp" />
+
+                <EditText
+                    android:id="@+id/passwordet"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_below="@+id/passwordtv"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_25dp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/montserratmedium"
+                    android:padding="@dimen/size_10dp"
+                    android:backgroundTint="@color/pageColor"
+                    android:text=""
+                    android:textColor="@color/headingColor" />
+
+                <TextView
+                    android:id="@+id/forgottv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/passwordet"
+                    android:layout_marginTop="@dimen/size_2dp"
+                    android:layout_marginRight="@dimen/size_22dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:gravity="right"
+                    android:text="Forgotten Password?"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/size_10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginbuttonrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordrelative"
+                android:layout_marginTop="@dimen/size_30dp">
+
+                <Button
+                    android:id="@+id/loginbutton"
+                    android:layout_width="143dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/size_23dp"
+                    android:background="@drawable/button_backgroundcolor"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="LOG IN"
+                    android:textSize="@dimen/size_12dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_below="@+id/loginbuttonrelative"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/creataccounttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"
+                    android:textColor="@color/titleColor"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/signuplink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textColor="@color/linkColor"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/progressbar_button"
+        android:padding="@dimen/size_12dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/white"
+        android:visibility="invisible"/>
+</RelativeLayout>

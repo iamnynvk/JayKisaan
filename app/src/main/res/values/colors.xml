@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="titleColor">#000000</color>
+    <color name="buttonColor1">#233975</color>
+    <color name="headingColor">#515C6F</color>
+    <color name="bottom_nav">#F5F5F5</color>
+    <color name="bottomBarColor">#FF6969</color>
+    <color name="pageColor">#F2F2F2</color>
+    <color name="buttonColor2">#727C8E</color>
+    <color name="linkColor">#0645AD</color>
+    <color name="borderColor">#C4C4C4</color>
+    <color name="buttonColor3">#F90707</color>
+    <color name="similarwhite">#f2f2f2</color>
+    <color name="transparent"> #00000000</color>
+    
+    <!--button color-->
+    
+    <color name="buttoncolor1">#d81b60</color>
+    <color name="buttoncolor2">#a00037</color>
+    <color name="buttoncolor3">#ff5c8d</color>
+    <color name="buttoncolor4">#1e88e5</color>
+    <color name="buttoncolor5">#005cb2</color>
+    <color name="buttoncolor6">#6ab7ff</color>
+
+</resources>
